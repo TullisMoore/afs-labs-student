@@ -431,4 +431,7 @@ if __name__ == "__main__":
     app.debug = True
     connect_to_db(app)
 
+    # Adding more comments
+    # Here
+
     app.run(host="0.0.0.0")
