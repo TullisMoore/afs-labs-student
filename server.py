@@ -116,7 +116,7 @@ def process_registration():
 #         products = db.session.query(Product).filter(Product.category.in_(session['filters'])).all()
 #     categories = db.session.query(Product.category).group_by(Product.category).all()
 
-#     return render_template("products.html", products=products, categories=categories)
+    return render_template("products.html", products=products, categories=categories)
 
 
 @app.route('/products')
@@ -430,8 +430,5 @@ if __name__ == "__main__":
     # Change app.debug to False before launch
     app.debug = True
     connect_to_db(app)
-
-    # Use the DebugToolbar
-    # DebugToolbarExtension(app)
 
     app.run(host="0.0.0.0")
